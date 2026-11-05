@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- The basic setup for my webpage -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- This is the title that shows up on the browser tab -->
+  <title>My Fantasy Worlds</title>
+
+  <!-- This adds Tailwind, so that it can style the webpage using utility classes -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body id="top" class="bg-white text-slate-900">
+
+  <!-- This part is the header and the navigation bar. This is what helps the visitors move around my website -->
+  <header class="border-b border-slate-200 bg-white">
+    <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4"
+         aria-label="Main navigation">
+
+      <!-- This part is the name of my website. Clicking on this will take the visitor back to the top -->
+      <a href="#top"
+         class="rounded text-lg font-bold text-blue-900
+                focus-visible:outline focus-visible:outline-2
+                focus-visible:outline-offset-4">
+        My Fantasy Worlds
+      </a>
+
+      <!-- This is the button that opens and closes the navigation menu on smaller screens -->
+      <button
+        id="menu-button"
+        type="button"
+        class="rounded-lg border border-slate-300 px-3 py-2
+               text-sm font-semibold text-slate-900 hover:bg-slate-100
+               focus-visible:outline focus-visible:outline-2
+               focus-visible:outline-offset-2 md:hidden"
+        aria-controls="nav-links"
+        aria-expanded="false"
+        aria-label="Toggle navigation menu">
+        Menu
+      </button>
+
+      <!-- These are the navigation links for Home, Explore Worlds, and About -->
+      <div id="nav-links"
+           class="hidden flex-col gap-4 md:flex md:flex-row md:items-center">
+
+        <a href="#top"
+           class="rounded text-slate-700 hover:text-blue-800
+                  focus-visible:outline focus-visible:outline-2
+                  focus-visible:outline-offset-2">
+          Home
+        </a>
+
+        <a href="#features"
+           class="rounded text-slate-700 hover:text-blue-800
+                  focus-visible:outline focus-visible:outline-2
+                  focus-visible:outline-offset-2">
+          Explore Worlds
+        </a>
+
+        <a href="#footer"
+           class="rounded text-slate-700 hover:text-blue-800
+                  focus-visible:outline focus-visible:outline-2
+                  focus-visible:outline-offset-2">
+          About
+        </a>
+
+      </div>
+    </nav>
+  </header>
+
+
+  <!-- This part is my main and where all my content is placed -->
+  <main>
+
+    <!-- This part is the hero section. This is what introduces my fantasy worlds to the visitors -->
+    <section class="px-6 py-16 text-center md:py-24">
+
+      <h1 class="text-3xl font-bold text-slate-900 md:text-5xl">
+        Explore my Fantasy Worlds
+      </h1>
+
+      <p class="mx-auto mt-4 max-w-xl text-slate-600">
+        A look into my fantasy worlds.
+      </p>
+
+      <!-- These are my two buttons that let the visitors explore what is on the page or learn more -->
+      <div class="mt-8 flex flex-wrap justify-center gap-4">
+
+        <a href="#features"
+           class="rounded-full bg-blue-800 px-6 py-3 text-white
+                  transition-colors hover:bg-blue-900
+                  motion-reduce:transition-none
+                  focus-visible:outline focus-visible:outline-2
+                  focus-visible:outline-offset-2">
+          On with the Adventure
+        </a>
+
+        <a href="#footer"
+           class="rounded-full border border-blue-800 px-6 py-3 text-blue-800
+                  transition-colors hover:bg-blue-50
+                  motion-reduce:transition-none
+                  focus-visible:outline focus-visible:outline-2
+                  focus-visible:outline-offset-2">
+          Learn More
+        </a>
+
+      </div>
+    </section>
+
+
+    <!-- This section shows my three fantasy worlds in cards that are responsive -->
+    <section id="features" class="px-6 py-12">
+
+      <div class="mx-auto grid max-w-6xl grid-cols-1 gap-6
+                  md:grid-cols-2 lg:grid-cols-3">
+
+        <!-- These are my three cards and a small paragraph about the worlds -->
+        <article id="dream-world"
+                 class="rounded-2xl border border-slate-200 p-6">
+
+                 <!--This is my first card about the Dream World -->
+          <h2 class="text-lg font-semibold text-slate-900">
+            Dream World
+          </h2>
+
+          <p class="mt-2 text-slate-600">
+            A realm that makes dreams become a reality.
+          </p>
+
+          <a href="#dream-world"
+             class="mt-4 inline-block text-blue-800 underline
+                    hover:text-blue-900
+                    focus-visible:outline focus-visible:outline-2
+                    focus-visible:outline-offset-2">
+            Explore Dream World
+          </a>
+
+        </article>
+
+        <!--This is my first card about Cloud Kingdom -->
+        <article id="cloud-kingdom"
+                 class="rounded-2xl border border-slate-200 p-6">
+
+          <h2 class="text-lg font-semibold text-slate-900">
+            Cloud Kingdom
+          </h2>
+
+          <p class="mt-2 text-slate-600">
+            A castle hidden among the clouds, invisible to mortals.
+          </p>
+
+          <a href="#cloud-kingdom"
+             class="mt-4 inline-block text-blue-800 underline
+                    hover:text-blue-900
+                    focus-visible:outline focus-visible:outline-2
+                    focus-visible:outline-offset-2">
+            Explore Cloud Kingdom
+          </a>
+
+        </article>
+
+        <!--This is my first card about the Dragon Realm -->
+        <article id="dragon-realm"
+                 class="rounded-2xl border border-slate-200 p-6">
+
+          <h2 class="text-lg font-semibold text-slate-900">
+            Dragon Realm
+          </h2>
+
+          <p class="mt-2 text-slate-600">
+            A place where dragons roam freely and rule the elements.
+          </p>
+
+          <a href="#dragon-realm"
+             class="mt-4 inline-block text-blue-800 underline
+                    hover:text-blue-900
+                    focus-visible:outline focus-visible:outline-2
+                    focus-visible:outline-offset-2">
+            Explore Dragon Realm
+          </a>
+
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- This part is the footer that is at the bottom of my webpage -->
+  <footer id="footer" class="bg-slate-900 px-6 py-10 text-white">
+
+    <div class="mx-auto max-w-6xl">
+
+      <!-- This part is the website name and a short explanation about it -->
+      <div class="text-center">
+
+        <h2 class="text-xl font-bold">
+          My Fantasy Worlds
+        </h2>
+
+        <p class="mt-2 text-slate-300">
+          Where imagination has no limits.
+        </p>
+
+      </div>
+
+      <!-- These are the footer navigation links to help the visitors go to the different sections -->
+      <nav class="mt-6 flex flex-wrap justify-center gap-6"
+           aria-label="Footer navigation">
+
+        <a href="#top"
+           class="text-slate-300 hover:text-white
+                  focus-visible:outline focus-visible:outline-2
+                  focus-visible:outline-offset-2">
+          Home
+        </a>
+
+        <a href="#features"
+           class="text-slate-300 hover:text-white
+                  focus-visible:outline focus-visible:outline-2
+                  focus-visible:outline-offset-2">
+          Explore Worlds
+        </a>
+
+        <a href="#dream-world"
+           class="text-slate-300 hover:text-white
+                  focus-visible:outline focus-visible:outline-2
+                  focus-visible:outline-offset-2">
+          Dream World
+        </a>
+
+      </nav>
+
+      <!-- This part is the copyright information for my website -->
+      <p class="mt-8 text-center text-sm text-slate-400">
+        © 2026 My Fantasy Worlds. All rights reserved.
+      </p>
+
+    </div>
+  </footer>
+
+
+  <!-- This is the JavaScript. It makes the mobile navigation menu open and close -->
+  <script>
+
+    // This first part gets the menu button and navigation links from my HTML
+    const menuButton = document.getElementById("menu-button");
+    const navLinks = document.getElementById("nav-links");
+
+    // This is what lets the menu open when the button is clicked and close when clicked again
+    menuButton.addEventListener("click", function () {
+
+      const isOpening = navLinks.classList.contains("hidden");
+
+      navLinks.classList.toggle("hidden");
+      navLinks.classList.toggle("flex", isOpening);
+
+      menuButton.setAttribute("aria-expanded", String(isOpening));
+
+    });
+
+    // This is what closes the menu after someone clicks on a navigation link
+    navLinks.querySelectorAll("a").forEach(function (link) {
+
+      link.addEventListener("click", function () {
+
+        navLinks.classList.add("hidden");
+        navLinks.classList.remove("flex");
+
+        menuButton.setAttribute("aria-expanded", "false");
+
+      });
+
+    });
+
+    // This was added so that users can press Escape on the keyboard and close the menu
+    document.addEventListener("keydown", function (event) {
+
+      if (
+        event.key === "Escape" &&
+        menuButton.getAttribute("aria-expanded") === "true"
+      ) {
+
+        navLinks.classList.add("hidden");
+        navLinks.classList.remove("flex");
+
+        menuButton.setAttribute("aria-expanded", "false");
+
+        menuButton.focus();
+
+      }
+
+    });
+
+  </script>
+
+</body>
+</html>
